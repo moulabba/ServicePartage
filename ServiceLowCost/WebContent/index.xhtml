@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<script src="http://maps.google.com/maps/api/js?sensor=true"
+		type="text/javascript"></script>
+</h:head>
+<h:body>
+	<h1>Hello World PrimeFaces</h1>
+
+	<h:form>
+		<h:commandButton action="#{ajouterPersonne.ajouterPersonne1}"
+			value="Provoquer la BD" />
+	</h:form>
+	<p:password id="inlineFeedback" value="#{ajouterPersonne.password}"
+		feedback="true" inline="true" />
+
+	 <p:commandButton value="Save" icon="ui-icon-check" style="display:block;margin:10px 0" />
+
+	<table class="order-table" border="1">
+		<tr>
+			<th class="order-table-header">Nom</th>
+			<th class="order-table-header">Prenom</th>
+			<th class="order-table-header">Email</th>
+			<th class="order-table-header">Login</th>
+			<th class="order-table-header">Ville</th>
+		</tr>
+		<tbody>
+			<ui:repeat var="p" value="#{ajouterPersonne.listPersonnes}">
+				<h:panelGroup>
+					<tr>
+						<td class="order-table-even-row">#{p.getNom()}</td>
+						<td class="order-table-even-row">#{p.getPrenom()}</td>
+						<td class="order-table-even-row">#{p.getEmail()}</td>
+						<td class="order-table-even-row">#{p.getLogin()}</td>
+						<td class="order-table-even-row">#{p.getVille()}</td>
+					</tr>
+				</h:panelGroup>
+			</ui:repeat>
+		</tbody>
+	</table>
+
+
+
+	<p:dataTable var="p" value="#{ajouterPersonne.listPersonnes}"
+		scrollable="true" scrollHeight="150">
+		<h:outputLabel value="p.getLogin() = 'smoulabb'" rendered="#{p.setLogin('TESSSSTT')}" /> 
+   
+		<p:column headerText="Nom" footerText="Nom">
+			<h:outputText value="#{p.getNom()}" />
+		</p:column>
+		<p:column headerText="Prenom" footerText="Prenom">
+			<h:outputText value="#{p.getPrenom()}" />
+		</p:column>
+		<p:column headerText="Email" footerText="Email">
+			<h:outputText value="#{p.getEmail()}" />
+		</p:column>
+		<p:column headerText="Login" footerText="Login">
+			<h:outputText value="#{p.getLogin()}" />
+		</p:column>
+		<p:column headerText="Ville" footerText="Ville">
+			<h:outputText value="#{p.getVille()}" />
+		</p:column>
+	</p:dataTable>
+	
+	
+
+</h:body>
+</html>
