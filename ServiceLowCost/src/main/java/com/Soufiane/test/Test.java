@@ -19,7 +19,7 @@ public class Test {
 	        
 	        //session.save(stock);
 	       
-	        
+	        System.out.println("test<<<<<<>>>>>>");
 	        
 	        //session.delete(stock);
 	        
