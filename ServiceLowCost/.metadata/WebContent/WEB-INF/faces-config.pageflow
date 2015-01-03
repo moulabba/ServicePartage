@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf13981000598540" configfile="/ServiceLowCost/WebContent/WEB-INF/faces-config.xml">
-  <nodes xsi:type="pageflow:PFPage" name="index.xhtml" id="pf14025781089220" referenceLink="//@navigationRule.0/@fromViewId|" outlinks="pf14025781089221" path="index.xhtml"/>
-  <nodes xsi:type="pageflow:PFPage" name="auth/authentification.xhtml" id="pf14025781089222" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" inlinks="pf14025781089221" path="/auth/authentification.xhtml"/>
-  <links id="pf14025781089221" target="pf14025781089222" source="pf14025781089220" outcome="success" fromaction="#{ajouterPersonne.ajouterPersonne1}"/>
+  <nodes xsi:type="pageflow:PFPage" name="index.xhtml" x="108" y="180" id="pf14025781089220" referenceLink="//@navigationRule.0/@fromViewId|" outlinks="pf14025781089221 pf14203123352660" path="index.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="auth/authentification.xhtml" x="336" y="216" id="pf14025781089222" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" inlinks="pf14025781089221" path="/auth/authentification.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="auth/test2.xhtml" x="216" y="48" id="pf14203123352661" inlinks="pf14203123352660" path="/auth/test2.xhtml"/>
+  <links id="pf14025781089221" target="pf14025781089222" source="pf14025781089220"/>
+  <links id="pf14203123352660" target="pf14203123352661" source="pf14025781089220"/>
 </pageflow:Pageflow>

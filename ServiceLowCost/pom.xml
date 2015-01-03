@@ -13,7 +13,7 @@
 		<tomcat.domain.name>Services</tomcat.domain.name>
 		<spring.version>3.1.1.RELEASE</spring.version>
 	</properties>
-	
+
 	<repositories>
 		<repository>
 			<id>JBoss repository</id>
@@ -33,14 +33,13 @@
 		<dependency>
 			<groupId>com.sun.faces</groupId>
 			<artifactId>jsf-api</artifactId>
-			<version>2.2.5</version>
+			<version>2.2.9</version>
 		</dependency>
 		<dependency>
 			<groupId>com.sun.faces</groupId>
 			<artifactId>jsf-impl</artifactId>
-			<version>2.2.5</version>
+			<version>2.2.9</version>
 		</dependency>
-
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>jstl</artifactId>
@@ -154,11 +153,7 @@
 			<artifactId>jackson-core-asl</artifactId>
 			<version>1.4.0</version>
 		</dependency>
-		<dependency>
-			<groupId>org.apache.poi</groupId>
-			<artifactId>poi</artifactId>
-			<version>3.7</version>
-		</dependency>
+
 		<dependency>
 			<groupId>displaytag</groupId>
 			<artifactId>displaytag</artifactId>
@@ -199,6 +194,10 @@
 			<artifactId>commons-collections</artifactId>
 			<version>3.2.1</version>
 		</dependency>
-
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+			<version>3.0.5.RELEASE</version>
+		</dependency>
 	</dependencies>
 </project>

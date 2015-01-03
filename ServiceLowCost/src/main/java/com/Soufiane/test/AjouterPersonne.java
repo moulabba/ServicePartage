@@ -16,10 +16,12 @@ public class AjouterPersonne {
 	
 	private ArrayList<Personne> listPersonnes; 
 	private String password;
+	
+	
 	public String ajouterPersonne1(){
 		
-		//DAO_Personne daoPersonne= new DAO_Personne();
-		//daoPersonne.ajouterPerson("moulabbi", "soufiane", "soufiane.moulabbi@gmail.com", "sale", "0", "admin", "ad", true);
+		DAO_Personne daoPersonne= new DAO_Personne();
+		daoPersonne.ajouterPerson("moulabbi", "soufiane", "soufiane.moulabbi@gmail.com", "sale", "0", "admin", "ad", true);
 		HttpSession session = (HttpSession) FacesContext.getCurrentInstance().getExternalContext().getSession(false);
 		session.setAttribute("soufiane", "test");
 		
@@ -29,6 +31,12 @@ public class AjouterPersonne {
                 new FacesMessage(FacesMessage.SEVERITY_FATAL,
                 "Invalid Login!",
                 "Please Try Again!"));
+		return "success";  
+	}
+	
+	public String user(){
+		
+		
 		return "success";  
 	}
 	
